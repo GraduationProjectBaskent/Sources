@@ -1,5 +1,5 @@
 Model Parametrelerinin incelenmesi 
-![Ekran görüntüsü 2024-11-20 175251](https://github.com/user-attachments/assets/1feb1874-52af-4a47-8e3d-c0d36ba3ad60)
+                                                                                                   ![Ekran görüntüsü 2024-11-20 175251](https://github.com/user-attachments/assets/1feb1874-52af-4a47-8e3d-c0d36ba3ad60)
 
 
 
