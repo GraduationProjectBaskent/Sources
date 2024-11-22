@@ -75,10 +75,32 @@ Kodlara src dizini altındaki scripts klasöründen ulaşabilirsiniz.
   5) Abone ile yayıncı iletişime geçer ve TCPROS ile veri aktarımı olur.
   
   
-  
+![Ekran görüntüsü 2024-11-22 174921](https://github.com/user-attachments/assets/1223dfc7-ba2e-4deb-8de8-3509ab6ea459)
+
+
+
+
+- Services (Servisler) :
+  Servisler yalnızca bir istek olduğunda yanıt veren, bir sunucudan ve istek gönderen bir istemciden oluşan TALEP - CEVAP iletişim modelini kullanan yapılardır.
+  Servislerde, isteğe yanıt verildikten sonra, düğümler arasındaki bağlantı kesilir. Böylece, ağın yükü azaltılmış olur.
+
+  Servis dosyaları talep ve yanıt bölümleri içerir. Bu bölümler dosya içerisinde alt alta yazılarak "---" işareti ile ayrılırlar. aşağıda bir servis dosyasının içeriğini görebilirsiniz
+
+  ![Screenshot from 2024-11-22 14-48-29](https://github.com/user-attachments/assets/3a49e943-9799-4152-9534-d542212fc5b0)
+
+  Şimdi aşağıda bulunan GİF ile Service Client - Service Server ilişkisini kuralım.
+
+  Service Client (İstemci) bir istek (Request) gönderiyor  Service Server'a. Server bu isteği alıyor değerlendiriyor ve istemciye bir cevap (Response) Döndürüyor.
   
 
+  ![Service-SingleServiceClient](https://github.com/user-attachments/assets/9387db63-5f1d-47bc-94a2-eebd7407aedc)
+
   
+
+
+  
+
+
 
   
   
