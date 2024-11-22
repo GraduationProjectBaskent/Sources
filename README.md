@@ -61,6 +61,19 @@ Kodlara src dizini altındaki scripts klasöründen ulaşabilirsiniz.
   Tek bir konu için birden fazla eşzamanlı yayıncı ve abone olabiliyor. Tek bir düğüm birden fazla konuda yayın yapabilir ve birden fazla konuya abone olabilir.
 
   Konular ve servislerin farkı; Konular tek yönlü iletişim içindir. Bir isteğe bağlı olarak yanıt alması gereken düğümler için, servisler kullanılmalıdır.
+
+
+  Şimdi bunu bir örnekle ve sırayla anlatmaya çalışıcam.
+  Yayıncı - Abone (Publisher - Subscriber) İletişim Modeli: Bu iletişim modeli, yayıncını açıkça alıcıları belirtmeden ya da  alıcıların bilgisine sahip olmadan mesajını yayınlamasını gerektirir.
+  Abone, yayınlanan mesajlar içerisinden ilgili olanları kullanır. Düğümlerin bilgilerini yöneten ve gerektiğinde düğümler arasında iletişim kuran ROS çekirdeği başlatılır.
+
+  Adımlar:
+  1) Yayıncı ve abone düğümler ROS çekirdeğine kayıt olur.
+  2) Abone düğüm çalıştırılır ve kendine uygun konuyu aramaya başlar.
+  3) Yayıncı düğüm çalıştırılır ve yayına başlar
+  4) ROS çekirdeği aboneye, aradığı konular için yayıncı olduğunu bildirir.
+  5) Abone ile yayıncı iletişime geçer ve TCPROS ile veri aktarımı olur.
+  
   
   
   
