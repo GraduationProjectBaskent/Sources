@@ -95,6 +95,35 @@ Kodlara src dizini altındaki scripts klasöründen ulaşabilirsiniz.
 
   ![Service-SingleServiceClient](https://github.com/user-attachments/assets/9387db63-5f1d-47bc-94a2-eebd7407aedc)
 
+
+1.2) mavROS ve drone kontrolü ile ilgili yapılanlar:
+
+ - Rosservice list ile mavROS'ta bulunan servislere ve rostopic list ile mavROS'ta bulunan konulara göz atalım bu çeşitli servisler ve topicler kullanılarak İHA'nın arm edilme
+   işlemi gibi Kullanılan İHA'nın takeoff ile yerden yükselmesi ve RTL (Return to Launch) ile başlangıç konumuna gelmesi gibi işlemler servisler ve topicler aracılığı ile gerçekleşmiştir.
+
+   [Screencast from 22-11-2024 14:56:46.webm](https://github.com/user-attachments/assets/3fc5c39d-dd92-43d7-9690-8820d56dcc8d)
+
+
+   ![Screenshot from 2024-11-22 14-44-41](https://github.com/user-attachments/assets/47cc68ab-98f9-4da3-ad8b-40841b4e7af1)
+
+
+
+
+
+   Yukarıdaki videoda gerçekleşen örnek için aşağıda rqt_graph ile  düğümler arası bağlantılar ve Subscriber - Publisher ilişkisi görülmektedir
+   gördüğünüz üzere 2 adet düğümümüz bulunmakta birisi /mavros diğeri benim oluşturduğum /drone_controller düğümü. Benim oluşturduğum drone_controller düğümü
+   2 adet Subscriber ve 1 adet Publisher içeriyor. /mavros/setpoint_position/local ile Drone, yayınlanan bu hedef pozisyona ulaşmaya çalışır. Bu işlem sırasında drone'un kontrolcüleri ve uçuş kontrol cihazı bu komutları uygular. 2 adet Subscriber içeriyor bunlardan ilki /mavros/local_position/pose konusunda abone olup Drone'un güncel konum bilgisi alınıyor aynı şekilde /mavros/state konusuna abone olup Drone'un güncel durum (modu mesela GUIDED, ARMED, LAUNCHED) bilgisi alınıyor.
+   
+
+   ![Screenshot from 2024-11-22 14-58-58](https://github.com/user-attachments/assets/85b3c743-c929-422f-867a-82d10ccbf1bb)
+
+
+
+   ![Screenshot from 2024-11-22 14-58-12](https://github.com/user-attachments/assets/46f4b8de-12c2-4383-b412-4769e79bd4e3)
+
+
+
+
   
 
 
